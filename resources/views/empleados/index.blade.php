@@ -51,9 +51,8 @@
             <button class="btn btn-danger" type="submit" onclick="return confirm('¿Deseas eliminar el registro?')">Borrar</button>
             </form>
             </td>
-                </tr> 
+            </tr> 
             @endforeach
-            
         </tbody>
     </table>
     

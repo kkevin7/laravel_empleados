@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Empleados;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class EmpleadosController extends Controller
 {
@@ -90,8 +91,16 @@ class EmpleadosController extends Controller
      * @param  \App\Empleados  $empleados
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Empleados $empleados)
+    public function destroy($id)
     {
-        //
+        //Obtener un registro de base de datos en base al ID
+        $empleado = Empleados::findOrFail($id);
+        if(Storage::delete('public/'.$empleado->foto)){
+            //Eliminar un registro de la base de datos en base a un ID
+            Empleados::destroy($id);
+            //redireccionar a la vista de empleados
+        };
+        //Redireccionar a la vista de empleados
+        return redirect('empleados');
     }
 }
