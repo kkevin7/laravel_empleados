@@ -83,9 +83,22 @@ class EmpleadosController extends Controller
      * @param  \App\Empleados  $empleados
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Empleados $empleados)
+    public function update(Request $request, $id)
     {
-        //
+        //Obtenes los registros del formulario a excepción del token
+        $datosEmpleado = request()->except(['_token','_method']);
+        if($request->hasFile('foto')){
+            //Buscar un registo por medio del ID
+            $empleado = Empleados::findOrFail($id);
+            //Eliminar la foto de storage de laravel
+            Storage::delete('public/'.$empleado->foto);
+            //Guardar la nueva foto
+            $datosEmpleado['foto'] = $request->file('foto')->store('uploads', 'public');
+        }
+        //Actualizar el registro de la base de datos con los datos del formulario
+        Empleados::where('id','=',$id)->update($datosEmpleado);
+        //Redireccionar a la vista de empleados
+        return redirect('empleados')->with('mensaje', 'Empleado modficado con éxito');
     }
 
     /**
