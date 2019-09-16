@@ -1,4 +1,4 @@
-# CRUD Creado con Laravel de empleados
+## CRUD Creado con Laravel de empleados
 
 ## Ejuctar el proyecto / RUN the projetc
 
@@ -12,5 +12,5 @@ php artisan storage:link
 
 php artisan serve
 
-## Visuzalizar el proyecto en el navegador // Open the Web navigator 
-## localhost:8000
+### Visuzalizar el proyecto en el navegador // Open the Web navigator 
+### [[localhost:8000]]

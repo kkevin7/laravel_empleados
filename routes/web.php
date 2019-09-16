@@ -10,9 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('empleados.index');
-});
+// Vista de bienvenida de laravel
+Route::get('/', "EmpleadosController@index");
 //Desta forma importaremos las rutas de los metedos de nuestro proyecto
 Route::resource('empleados', 'EmpleadosController');

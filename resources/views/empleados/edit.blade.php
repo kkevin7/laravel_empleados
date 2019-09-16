@@ -11,19 +11,19 @@
     
         <div class="form-group">
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="" value="{{$empleado->nombre}}" class="form-control" placeholder="Nombre del empleado" aria-describedby="helpId">
+                <input type="text" name="nombre" id="" value="{{$empleado->nombre}}" class="form-control" placeholder="Nombre del empleado" aria-describedby="helpId" required>
               </div>
               <div class="form-group">
                 <label for="apellido">Apellidos</label>
-                <input type="text" class="form-control" name="apellido" value="{{$empleado->apellido}}" id="" aria-describedby="helpId" placeholder="Apellido del empleado">
+                <input type="text" class="form-control" name="apellido" value="{{$empleado->apellido}}" id="" aria-describedby="helpId" placeholder="Apellido del empleado" required>
               </div>
               <div class="form-group">
                 <label for="correo">Correo</label>
-                <input type="email" class="form-control" name="correo" value="{{$empleado->correo}}" id="" aria-describedby="emailHelpId" placeholder="Correo del empleado">
+                <input type="email" class="form-control" name="correo" value="{{$empleado->correo}}" id="" aria-describedby="emailHelpId" placeholder="Correo del empleado" required>
               </div>
               <div class="form-group">
                 <label for="telefono">Telefono</label>
-                <input type="text" class="form-control" name="telefono" value="{{$empleado->telefono}}" id="" aria-describedby="helpId" placeholder="Telefono del empleado">
+                <input type="text" class="form-control" name="telefono" value="{{$empleado->telefono}}" id="" aria-describedby="helpId" placeholder="Telefono del empleado" required>
               </div>
               <div class="form-group">
                 <label for="foto">Foto</label>

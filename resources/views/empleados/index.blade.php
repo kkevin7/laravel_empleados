@@ -55,5 +55,7 @@
             @endforeach
         </tbody>
     </table>
+    {{-- Paginador de los registros de la tabla empleados --}}
+    {{$empleados->links()}}
     
 @endsection

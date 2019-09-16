@@ -9,19 +9,19 @@
         {{ csrf_field() }}
         <div class="form-group">
           <label for="nombre">Nombre</label>
-          <input type="text" name="nombre" id="" class="form-control" placeholder="Nombre del empleado" aria-describedby="helpId">
+          <input type="text" name="nombre" id="" class="form-control" placeholder="Nombre del empleado" aria-describedby="helpId" required>
         </div>
         <div class="form-group">
           <label for="apellido">Apellidos</label>
-          <input type="text" class="form-control" name="apellido" id="" aria-describedby="helpId" placeholder="Apellido del empleado">
+          <input type="text" class="form-control" name="apellido" id="" aria-describedby="helpId" placeholder="Apellido del empleado" required>
         </div>
         <div class="form-group">
           <label for="correo">Correo</label>
-          <input type="email" class="form-control" name="correo" id="" aria-describedby="emailHelpId" placeholder="Correo del empleado">
+          <input type="email" class="form-control" name="correo" id="" aria-describedby="emailHelpId" placeholder="Correo del empleado" required>
         </div>
         <div class="form-group">
           <label for="telefono">Telefono</label>
-          <input type="text" class="form-control" name="telefono" id="" aria-describedby="helpId" placeholder="Telefono del empleado">
+          <input type="text" class="form-control" name="telefono" id="" aria-describedby="helpId" placeholder="Telefono del empleado" required>
         </div>
         <div class="form-group">
           <label for="foto">Foto</label>
