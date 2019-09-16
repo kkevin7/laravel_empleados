@@ -2,6 +2,8 @@
 
 ## Ejuctar el proyecto / RUN the projetc
 
+composer install
+
 php artisan key:generate
 
 php artisan config:cache
