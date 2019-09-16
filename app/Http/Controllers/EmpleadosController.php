@@ -14,7 +14,8 @@ class EmpleadosController extends Controller
      */
     public function index()
     {
-        //
+        //devolveremos la vista de empleados
+        return view('empleados.index');
     }
 
     /**
@@ -24,7 +25,8 @@ class EmpleadosController extends Controller
      */
     public function create()
     {
-        //
+        //devolveremos la vista de creacion de registros
+        return view('empleados.create');
     }
 
     /**

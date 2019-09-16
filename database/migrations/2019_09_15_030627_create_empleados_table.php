@@ -17,11 +17,11 @@ class CreateEmpleadosTable extends Migration
         Schema::create('empleados', function (Blueprint $table) {
             //Aquí definieremos los campos de la tabla
             $table->increments('id');
-            $table->string('nombre');
-            $table->string('apellido');
-            $table->string('correo');
-            $table->string('telefono');
-            $table->string('foto');
+            $table->string('nombre',50);
+            $table->string('apellido',50);
+            $table->string('correo',100);
+            $table->string('telefono',15);
+            $table->string('foto',191);
             //Esta forma utiliza Laravel para manejar las fechas de creación
             $table->timestamps();
         });

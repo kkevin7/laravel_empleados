@@ -12,5 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('empleados.index');
 });
+//Desta forma importaremos las rutas de los metedos de nuestro proyecto
+Route::resource('empleados', 'EmpleadosController');
