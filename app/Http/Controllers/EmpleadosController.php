@@ -37,8 +37,17 @@ class EmpleadosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // obtendremos los datos de la petición a excepcion del token
+        $datosEmpleado = request()->except('_token');
+        if($request->hasFile('foto')){
+            //guardaremos la foto dentro de la carpeta store de laravel
+            $datosEmpleado['foto'] = $request->file('foto')->store('uploads', 'public');
+        }
+        //Insetaremos un registro en la base de datso
+        Empleados::insert($datosEmpleado);
+        return redirect('empleados')->with('mensaje', 'Empleado agregado con éxito');
     }
+
 
     /**
      * Display the specified resource.

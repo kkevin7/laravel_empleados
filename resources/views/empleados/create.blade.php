@@ -12,8 +12,8 @@
           <input type="text" name="nombre" id="" class="form-control" placeholder="Nombre del empleado" aria-describedby="helpId">
         </div>
         <div class="form-group">
-          <label for="apellidos">Apellidos</label>
-          <input type="text" class="form-control" name="apellidos" id="" aria-describedby="helpId" placeholder="Apellido del empleado">
+          <label for="apellido">Apellidos</label>
+          <input type="text" class="form-control" name="apellido" id="" aria-describedby="helpId" placeholder="Apellido del empleado">
         </div>
         <div class="form-group">
           <label for="correo">Correo</label>
